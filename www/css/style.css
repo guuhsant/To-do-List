@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --color-dark: rgb(14, 14, 14);
+    --color-dark2: rgb(32, 32, 32);
+    --color-dark3: rgb(22, 22, 22);
+    --color-white: #fff;
+    --color-green: rgb(103, 195, 80);
+    --color-green2: rgb(51, 149, 26);
+    --color-red: rgb(184, 40, 35);
+    --color-red2: rgb(146, 22, 17);
+}
+body{
+    background-color:var(--color-dark);
+    color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+.content h1{
+    text-align: center;
+}
+
+.content--add-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#input-new-task,
+#btn-new-task{
+    outline: none;
+    font-size: 1rem;
+    border: none;
+    padding: 1rem;
+}
+#input-new-task{
+    width: 20rem;
+    border-radius: 1rem;
+}
+#btn-new-task{
+    background-color: var(--color-dark2);
+    font-size: 1.5rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#btn-new-task:hover{
+    background-color: var(--color-dark3);
+}
+#to-do-list li{
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+#to-do-list li:hover
+{
+    background-color: var(--color-dark3);
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+
+}
+#btn-ok
+{
+    border: none;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s ease;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+#btn-ok:hover
+{
+    background-color: var(--color-green2);
+}
+
+@media screen and (max-width:450px)
+{
+    body{
+    padding: 3rem;
+    }
+    #input-new-task{
+        width: 15rem;
+    }
+}
